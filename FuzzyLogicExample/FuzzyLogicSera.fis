@@ -1,0 +1,33 @@
+[System]
+Name='Sera'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=1
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Karbondioksik'
+Range=[0 2000]
+NumMFs=1
+MF1='mf2':'trimf',[1400 1600 1800]
+
+[Input2]
+Name='Ruzgar'
+Range=[0 3]
+NumMFs=1
+MF1='mf1':'trapmf',[0 0 0.5 1]
+
+[Output1]
+Name='Derece'
+Range=[0 60]
+NumMFs=1
+MF1='mf2':'trimf',[35 42.5 50]
+
+[Rules]
+1 1, 1 (1) : 1
